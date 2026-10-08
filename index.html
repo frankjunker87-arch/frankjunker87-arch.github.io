@@ -3,96 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frank Junker — Hacker · Filósofo · Coder · Lover</title>
-<meta name="description" content="Página personal de Frank Junker: código, poesía y tecnología.">
+<title>FRANK_JUNKER // Hacker · Filósofo · Coder · Lover</title>
+<meta name="description" content="Frank Junker: hacker, filósofo, coder y lover. Código de día, poesía de noche.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="scanlines"></div>
+<div class="grid-bg"></div>
+
 <header class="nav">
-  <a class="brand" href="#">FJ<span>.</span></a>
+  <a class="brand" href="#">FJ<span>_</span><span class="cursor">▮</span></a>
   <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#perfil">./perfil</a>
+    <a href="#proyectos">./proyectos</a>
+    <a href="#redes">./redes</a>
   </nav>
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-photo">
-      <img src="nosotros.webp" alt="Frank y Roja abrazándose">
+      <div class="photo-frame">
+        <img src="nosotros.webp" alt="Frank y Roja">
+        <div class="photo-hud tl"></div>
+        <div class="photo-hud tr"></div>
+        <div class="photo-hud bl"></div>
+        <div class="photo-hud br"></div>
+      </div>
+      <p class="photo-caption">// STATUS: en línea <span class="blink">●</span></p>
     </div>
     <div class="hero-text">
-      <p class="kicker">// hola, soy</p>
-      <h1>Frank Junker</h1>
-      <p class="tagline">Hacker · Filósofo · Coder · Lover</p>
+      <p class="kicker">&gt; hola_mundo <span class="cursor">▮</span></p>
+      <h1 class="glitch" data-text="FRANK JUNKER">FRANK JUNKER</h1>
+      <p class="tagline">
+        <span class="neon-cyan">Hacker</span> ·
+        <span class="neon-magenta">Filósofo</span> ·
+        <span class="neon-cyan">Coder</span> ·
+        <span class="neon-magenta">Lover</span>
+      </p>
       <p class="intro">
         Escribo código de día y poesía de noche. Me mueven la tecnología,
         las ideas que incomodan y las personas que se quedan.
-        Esta página es mi rincón en internet: lo que construyo, lo que pienso
+        Bienvenido a mi rincón en la red: lo que construyo, lo que pienso
         y lo que amo.
       </p>
       <div class="hero-links">
-        <a class="btn primary" href="https://github.com/frankjunker87-arch" target="_blank" rel="noopener">Mi GitHub</a>
-        <a class="btn" href="#contacto">Hablemos</a>
+        <a class="btn primary" href="https://github.com/frankjunker87-arch" target="_blank" rel="noopener">&gt; ver_mi_código</a>
+        <a class="btn" href="#redes">&gt; conectar</a>
       </div>
     </div>
   </section>
 
-  <section id="sobre-mi" class="section">
-    <h2>Sobre mí</h2>
+  <!-- PERFIL -->
+  <section id="perfil" class="section">
+    <h2><span class="prompt">$</span> whoami</h2>
+    <div class="terminal">
+      <p><span class="prompt">➜</span> <span class="cmd">./identidad --verbose</span></p>
+      <p class="out">nombre: <b>Frank Junker</b> aka <b>Jack Frank Worthing</b></p>
+      <p class="out">roles: [hacker, filósofo, coder, lover]</p>
+      <p class="out">stack: IA · nube · finanzas · automatización</p>
+      <p class="out">poesía: versos bilingües sobre amores imposibles, distancia y superación</p>
+      <p class="out">misión: que el conocimiento llegue más lejos <span class="cursor">▮</span></p>
+    </div>
     <div class="cards">
       <div class="card">
-        <h3>💻 Código</h3>
-        <p>Desarrollo software y automatizaciones. Me interesa la IA, la nube
-        y la tecnología aplicada al mundo financiero.</p>
+        <h3><span class="neon-cyan">01</span> // CÓDIGO</h3>
+        <p>Software, IA y automatizaciones. Tecnología aplicada al mundo financiero y más allá.</p>
       </div>
       <div class="card">
-        <h3>🖋️ Poesía</h3>
-        <p>Publico poemas bilingües sobre amores imposibles, distancia y
-        superación en <a href="https://instagram.com/jackfrankworthing" target="_blank" rel="noopener">@jackfrankworthing</a>.</p>
+        <h3><span class="neon-magenta">02</span> // POESÍA</h3>
+        <p>Poemas bilingües en primera persona en <a href="https://instagram.com/jackfrankworthing" target="_blank" rel="noopener">@jackfrankworthing</a>: amores imposibles, distancia, superación.</p>
       </div>
       <div class="card">
-        <h3>📚 Enseñar</h3>
-        <p>Creo guías de estudio abiertas, como mi serie para el examen
-        CENEVAL EXANI-II, para que el conocimiento llegue más lejos.</p>
+        <h3><span class="neon-cyan">03</span> // ENSEÑAR</h3>
+        <p>Guías de estudio abiertas — como mi serie CENEVAL EXANI-II — para que el conocimiento llegue más lejos.</p>
       </div>
     </div>
   </section>
 
+  <!-- PROYECTOS -->
   <section id="proyectos" class="section">
-    <h2>Proyectos</h2>
+    <h2><span class="prompt">$</span> ls ./proyectos</h2>
     <div class="cards">
       <div class="card project">
         <h3>Guía CENEVAL EXANI-II</h3>
-        <p>Serie de 12 artículos que cubren todas las materias del examen
-        de admisión EXANI-II, con ejemplos y material de repaso.</p>
-        <a href="https://github.com/frankjunker87-arch/guia-ceneval-exani-ii" target="_blank" rel="noopener">Ver en GitHub →</a>
+        <p>Serie de 12 artículos con todas las materias del examen de admisión EXANI-II, con ejemplos y material de repaso.</p>
+        <a href="https://github.com/frankjunker87-arch/guia-ceneval-exani-ii" target="_blank" rel="noopener">abrir_en_github →</a>
       </div>
       <div class="card project">
         <h3>la-p-pe</h3>
-        <p>Proyecto colaborativo donde cazo insignias de GitHub con mi
-        compañero de pair programming.</p>
-        <a href="https://github.com/frankjunker87-arch/la-p-pe" target="_blank" rel="noopener">Ver en GitHub →</a>
+        <p>Proyecto colaborativo donde cazo insignias de GitHub con mi compañero de pair programming.</p>
+        <a href="https://github.com/frankjunker87-arch/la-p-pe" target="_blank" rel="noopener">abrir_en_github →</a>
       </div>
     </div>
   </section>
 
-  <section id="contacto" class="section">
-    <h2>Encuéntrame</h2>
-    <div class="social">
-      <a href="https://github.com/frankjunker87-arch" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/jack-frank-worthing-junker" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://instagram.com/jackfrankworthing" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://medium.com/@frank.junker.87" target="_blank" rel="noopener">Medium</a>
-      <a href="https://www.threads.com/@jackfrankworthing" target="_blank" rel="noopener">Threads</a>
+  <!-- REDES -->
+  <section id="redes" class="section">
+    <h2><span class="prompt">$</span> conectar --todas</h2>
+    <p class="section-sub">// encuéntrame en la red — elige tu canal</p>
+    <div class="social-grid">
+      <a class="soc" href="https://github.com/frankjunker87-arch" target="_blank" rel="noopener">
+        <span class="soc-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.15c0 .3.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </span>
+        <span class="soc-name">GitHub</span>
+        <span class="soc-handle">@frankjunker87-arch</span>
+      </a>
+      <a class="soc" href="https://www.linkedin.com/in/jack-frank-worthing-junker" target="_blank" rel="noopener">
+        <span class="soc-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </span>
+        <span class="soc-name">LinkedIn</span>
+        <span class="soc-handle">Jack Frank Worthing Junker</span>
+      </a>
+      <a class="soc" href="https://instagram.com/jackfrankworthing" target="_blank" rel="noopener">
+        <span class="soc-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zm0 3.68a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+        </span>
+        <span class="soc-name">Instagram</span>
+        <span class="soc-handle">@jackfrankworthing</span>
+      </a>
+      <a class="soc" href="https://www.threads.com/@jackfrankworthing" target="_blank" rel="noopener">
+        <span class="soc-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.94 8.36c.1.55.16 1.13.16 1.73 0 3.24-2.63 5.87-5.87 5.87-1.5 0-2.87-.56-3.9-1.48l1.46-1.46c.66.55 1.51.88 2.44.88 2.12 0 3.84-1.72 3.84-3.84 0-.42-.07-.83-.19-1.21h-2.66c-.62 0-1.12-.5-1.12-1.12s.5-1.12 1.12-1.12h3.72zM12 7.5c.94 0 1.79.3 2.47.81l-1.35 1.35c-.32-.2-.7-.31-1.12-.31-1.1 0-2 .9-2 2s.9 2 2 2c.42 0 .8-.11 1.12-.31l1.35 1.35c-.68.51-1.53.81-2.47.81-2.21 0-4-1.79-4-4s1.79-4 4-4z"/></svg>
+        </span>
+        <span class="soc-name">Threads</span>
+        <span class="soc-handle">@jackfrankworthing</span>
+      </a>
+      <a class="soc" href="https://medium.com/@frank.junker.87" target="_blank" rel="noopener">
+        <span class="soc-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.3 7.2c-.1-.43.16-.86.58-.97l3.52-.84c.34-.08.7.1.85.41l2.72 5.7 2.5-6.14c.14-.35.5-.57.87-.52l3.63.5c.42.06.72.46.66.88-.05.35-.35.63-.7.66l-1.55.14-3.07 7.55c-.15.36-.52.58-.9.53l-.1-.01c-.36-.06-.64-.34-.7-.7l-1.6-5.15-2.35 5.1c-.16.35-.53.55-.9.49l-.1-.02c-.37-.08-.63-.4-.64-.78l-.05-7.02-2.06.5c-.42.1-.85-.17-.95-.59-.02-.09-.03-.18-.03-.27v-.03z"/></svg>
+        </span>
+        <span class="soc-name">Medium</span>
+        <span class="soc-handle">@frank.junker.87</span>
+      </a>
+      <a class="soc" href="https://tellonym.me/jackfrankworthing" target="_blank" rel="noopener">
+        <span class="soc-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+        </span>
+        <span class="soc-name">Tellonym</span>
+        <span class="soc-handle">@jackfrankworthing</span>
+      </a>
     </div>
   </section>
 </main>
 
 <footer>
-  <p>Hecho con ♥ por Frank Junker · <span id="year"></span></p>
+  <p><span class="neon-cyan">FJ</span><span class="neon-magenta">://</span> frank_junker <span class="dim">·</span> hecho con <span class="neon-magenta">♥</span> y café <span class="dim">·</span> <span id="year"></span></p>
+  <p class="dim">// fin de la transmisión <span class="cursor">▮</span></p>
 </footer>
 
 <script>
