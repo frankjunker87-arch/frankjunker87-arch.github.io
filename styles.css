@@ -146,6 +146,14 @@ main { max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
 .card a:hover { text-shadow: 0 0 10px rgba(0,240,255,.8); }
 .project a { display: inline-block; margin-top: .9rem; font-weight: 700; }
 
+/* --- spotify player --- */
+.player-frame {
+  border: 1px solid rgba(0,240,255,.35); border-radius: .8rem; overflow: hidden;
+  box-shadow: 0 0 32px rgba(0,240,255,.15), 0 0 90px rgba(255,42,109,.10);
+  background: var(--panel);
+}
+.player-frame iframe { display: block; }
+
 /* --- social grid --- */
 .social-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem;
