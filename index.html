@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frank Junker — Hacker · Filósofo · Coder · Lover</title>
+<meta name="description" content="Página personal de Frank Junker: código, poesía y tecnología.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#">FJ<span>.</span></a>
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-photo">
+      <img src="nosotros.webp" alt="Frank y Roja abrazándose">
+    </div>
+    <div class="hero-text">
+      <p class="kicker">// hola, soy</p>
+      <h1>Frank Junker</h1>
+      <p class="tagline">Hacker · Filósofo · Coder · Lover</p>
+      <p class="intro">
+        Escribo código de día y poesía de noche. Me mueven la tecnología,
+        las ideas que incomodan y las personas que se quedan.
+        Esta página es mi rincón en internet: lo que construyo, lo que pienso
+        y lo que amo.
+      </p>
+      <div class="hero-links">
+        <a class="btn primary" href="https://github.com/frankjunker87-arch" target="_blank" rel="noopener">Mi GitHub</a>
+        <a class="btn" href="#contacto">Hablemos</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="section">
+    <h2>Sobre mí</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>💻 Código</h3>
+        <p>Desarrollo software y automatizaciones. Me interesa la IA, la nube
+        y la tecnología aplicada al mundo financiero.</p>
+      </div>
+      <div class="card">
+        <h3>🖋️ Poesía</h3>
+        <p>Publico poemas bilingües sobre amores imposibles, distancia y
+        superación en <a href="https://instagram.com/jackfrankworthing" target="_blank" rel="noopener">@jackfrankworthing</a>.</p>
+      </div>
+      <div class="card">
+        <h3>📚 Enseñar</h3>
+        <p>Creo guías de estudio abiertas, como mi serie para el examen
+        CENEVAL EXANI-II, para que el conocimiento llegue más lejos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="section">
+    <h2>Proyectos</h2>
+    <div class="cards">
+      <div class="card project">
+        <h3>Guía CENEVAL EXANI-II</h3>
+        <p>Serie de 12 artículos que cubren todas las materias del examen
+        de admisión EXANI-II, con ejemplos y material de repaso.</p>
+        <a href="https://github.com/frankjunker87-arch/guia-ceneval-exani-ii" target="_blank" rel="noopener">Ver en GitHub →</a>
+      </div>
+      <div class="card project">
+        <h3>la-p-pe</h3>
+        <p>Proyecto colaborativo donde cazo insignias de GitHub con mi
+        compañero de pair programming.</p>
+        <a href="https://github.com/frankjunker87-arch/la-p-pe" target="_blank" rel="noopener">Ver en GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <h2>Encuéntrame</h2>
+    <div class="social">
+      <a href="https://github.com/frankjunker87-arch" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/jack-frank-worthing-junker" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://instagram.com/jackfrankworthing" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://medium.com/@frank.junker.87" target="_blank" rel="noopener">Medium</a>
+      <a href="https://www.threads.com/@jackfrankworthing" target="_blank" rel="noopener">Threads</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Hecho con ♥ por Frank Junker · <span id="year"></span></p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
