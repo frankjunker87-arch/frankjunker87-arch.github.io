@@ -19,6 +19,7 @@
     <a href="#proyectos">./proyectos</a>
     <a href="#playlist">./playlist</a>
     <a href="#redes">./redes</a>
+    <a href="#colabs">./colabs</a>
   </nav>
 </header>
 
@@ -27,7 +28,7 @@
   <section class="hero">
     <div class="hero-photo">
       <div class="photo-frame">
-        <img src="nosotros.webp" alt="Frank y Roja">
+        <img src="frank-cafe.jpg" alt="Frank Junker">
         <div class="photo-hud tl"></div>
         <div class="photo-hud tr"></div>
         <div class="photo-hud bl"></div>
@@ -159,6 +160,25 @@
       </a>
     </div>
   </section>
+
+  <!-- COLABS -->
+  <section id="colabs" class="section">
+    <h2><span class="prompt">$</span> ls ./colabs</h2>
+    <p class="section-sub">// colaboraciones y musas del universo cyberpunk — desliza</p>
+    <div class="colabs-carousel">
+      <button class="colabs-btn prev" aria-label="Anterior">‹</button>
+      <div class="colabs-track" id="colabsTrack">
+        <img src="img_chk/colab-2.jpg" alt="Colab 2">
+        <img src="img_chk/colab-3.jpg" alt="Colab 3">
+        <img src="img_chk/colab-4.jpg" alt="Colab 4">
+        <img src="img_chk/colab-5.jpg" alt="Colab 5">
+        <img src="img_chk/colab-7.jpg" alt="Colab 7">
+        <img src="img_chk/colab-8.png" alt="Colab 8">
+        <img src="img_chk/colab-9.jpg" alt="Colab 9">
+      </div>
+      <button class="colabs-btn next" aria-label="Siguiente">›</button>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -168,6 +188,17 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+  (function () {
+    var track = document.getElementById('colabsTrack');
+    if (!track) return;
+    var step = 60;
+    document.querySelector('.colabs-btn.prev').addEventListener('click', function () { track.scrollBy({ left: -step, behavior: 'smooth' }); });
+    document.querySelector('.colabs-btn.next').addEventListener('click', function () { track.scrollBy({ left: step, behavior: 'smooth' }); });
+    setInterval(function () {
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) { track.scrollTo({ left: 0, behavior: 'smooth' }); }
+      else { track.scrollBy({ left: step, behavior: 'smooth' }); }
+    }, 3000);
+  })();
 </script>
 </body>
 </html>
