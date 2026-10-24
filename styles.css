@@ -194,7 +194,7 @@ footer p + p { margin-top: .4rem; }
 /* --- colabs carousel (una foto a la vez, rotación automática) --- */
 .colabs-carousel { display: flex; align-items: center; justify-content: center; gap: .8rem; }
 .colabs-track {
-  position: relative; width: 3cm; height: 3cm; overflow: hidden;
+  position: relative; width: 5cm; height: 5cm; overflow: hidden;
   border: 1px solid rgba(0,240,255,.35); border-radius: .6rem;
   box-shadow: 0 0 32px rgba(0,240,255,.18), 0 0 90px rgba(255,42,109,.12);
 }
@@ -214,3 +214,30 @@ footer p + p { margin-top: .4rem; }
   background: transparent; cursor: pointer; padding: 0;
 }
 .colabs-dots button.active { background: var(--cyan); box-shadow: 0 0 8px rgba(0,240,255,.8); }
+
+/* --- colabs: grafo de nodos con movimiento --- */
+.colabs-layout { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.graph-nodes { position: relative; width: 220px; height: 160px; flex: 0 0 auto; }
+.graph-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+.graph-lines line {
+  stroke: rgba(0,240,255,.55); stroke-width: 1.5;
+  stroke-dasharray: 6 6; animation: dashflow 1.2s linear infinite;
+}
+@keyframes dashflow { to { stroke-dashoffset: -24; } }
+.graph-node {
+  position: absolute; display: flex; align-items: center; gap: .4rem;
+  padding: .3rem .7rem; font-size: .75rem; color: var(--text); text-decoration: none;
+  background: var(--panel); border: 1px solid var(--cyan); border-radius: 2rem;
+  box-shadow: 0 0 14px rgba(0,240,255,.25);
+  animation: nodefloat 3s ease-in-out infinite;
+}
+.graph-node:hover { color: var(--cyan); text-shadow: 0 0 10px rgba(0,240,255,.8); }
+.node-github { top: 10px; left: 0; }
+.node-ig { top: 45px; right: 0; animation-delay: .6s; }
+.node-web { bottom: 10px; left: 20px; animation-delay: 1.2s; }
+.node-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan); animation: nodepulse 1.5s ease-in-out infinite;
+}
+@keyframes nodepulse { 50% { transform: scale(1.6); opacity: .6; } }
+@keyframes nodefloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }

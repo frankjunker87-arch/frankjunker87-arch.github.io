@@ -165,18 +165,30 @@
   <section id="colabs" class="section">
     <h2><span class="prompt">$</span> ls ./colabs</h2>
     <p class="section-sub">// colaboraciones y musas del universo cyberpunk — desliza</p>
-    <div class="colabs-carousel">
-      <button class="colabs-btn prev" aria-label="Anterior">‹</button>
-      <div class="colabs-track" id="colabsTrack">
-        <img src="img_chk/colab-2.jpg" alt="Colab 2" class="active">
-        <img src="img_chk/colab-3.jpg" alt="Colab 3">
-        <img src="img_chk/colab-4.jpg" alt="Colab 4">
-        <img src="img_chk/colab-5.jpg" alt="Colab 5">
-        <img src="img_chk/colab-7.jpg" alt="Colab 7">
-        <img src="img_chk/colab-8.png" alt="Colab 8">
-        <img src="img_chk/colab-9.jpg" alt="Colab 9">
+    <div class="colabs-layout">
+      <div class="colabs-carousel">
+        <button class="colabs-btn prev" aria-label="Anterior">‹</button>
+        <div class="colabs-track" id="colabsTrack">
+          <img src="img_chk/colab-2.jpg" alt="Colab 2" class="active">
+          <img src="img_chk/colab-3.jpg" alt="Colab 3">
+          <img src="img_chk/colab-4.jpg" alt="Colab 4">
+          <img src="img_chk/colab-5.jpg" alt="Colab 5">
+          <img src="img_chk/colab-7.jpg" alt="Colab 7">
+          <img src="img_chk/colab-8.png" alt="Colab 8">
+          <img src="img_chk/colab-9.jpg" alt="Colab 9">
+        </div>
+        <button class="colabs-btn next" aria-label="Siguiente">›</button>
       </div>
-      <button class="colabs-btn next" aria-label="Siguiente">›</button>
+      <div class="graph-nodes">
+        <svg class="graph-lines" viewBox="0 0 220 160" aria-hidden="true">
+          <line x1="45" y1="25" x2="185" y2="60" />
+          <line x1="185" y1="60" x2="75" y2="140" />
+          <line x1="75" y1="140" x2="45" y2="25" />
+        </svg>
+        <a class="graph-node node-github" href="https://github.com/keysi-kunz" target="_blank" rel="noopener"><span class="node-dot"></span>GitHub</a>
+        <a class="graph-node node-ig" href="https://www.instagram.com/keysi_kunz/" target="_blank" rel="noopener"><span class="node-dot"></span>Instagram</a>
+        <a class="graph-node node-web" href="https://keysi-kunz.github.io/keysi.github.io" target="_blank" rel="noopener"><span class="node-dot"></span>Website</a>
+      </div>
     </div>
     <div class="colabs-dots" id="colabsDots"></div>
   </section>
