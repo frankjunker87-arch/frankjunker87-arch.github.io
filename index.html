@@ -168,7 +168,7 @@
     <div class="colabs-carousel">
       <button class="colabs-btn prev" aria-label="Anterior">‹</button>
       <div class="colabs-track" id="colabsTrack">
-        <img src="img_chk/colab-2.jpg" alt="Colab 2">
+        <img src="img_chk/colab-2.jpg" alt="Colab 2" class="active">
         <img src="img_chk/colab-3.jpg" alt="Colab 3">
         <img src="img_chk/colab-4.jpg" alt="Colab 4">
         <img src="img_chk/colab-5.jpg" alt="Colab 5">
@@ -178,6 +178,7 @@
       </div>
       <button class="colabs-btn next" aria-label="Siguiente">›</button>
     </div>
+    <div class="colabs-dots" id="colabsDots"></div>
   </section>
 </main>
 
@@ -189,15 +190,30 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   (function () {
-    var track = document.getElementById('colabsTrack');
-    if (!track) return;
-    var step = 60;
-    document.querySelector('.colabs-btn.prev').addEventListener('click', function () { track.scrollBy({ left: -step, behavior: 'smooth' }); });
-    document.querySelector('.colabs-btn.next').addEventListener('click', function () { track.scrollBy({ left: step, behavior: 'smooth' }); });
-    setInterval(function () {
-      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) { track.scrollTo({ left: 0, behavior: 'smooth' }); }
-      else { track.scrollBy({ left: step, behavior: 'smooth' }); }
-    }, 3000);
+    var imgs = document.querySelectorAll('#colabsTrack img');
+    if (!imgs.length) return;
+    var dotsWrap = document.getElementById('colabsDots');
+    var dots = [];
+    var i = 0, timer;
+    function show(n) {
+      imgs[i].classList.remove('active');
+      dots[i].classList.remove('active');
+      i = (n + imgs.length) % imgs.length;
+      imgs[i].classList.add('active');
+      dots[i].classList.add('active');
+    }
+    function restart() { clearInterval(timer); timer = setInterval(function () { show(i + 1); }, 3000); }
+    imgs.forEach(function (_, k) {
+      var d = document.createElement('button');
+      d.setAttribute('aria-label', 'Foto ' + (k + 1));
+      if (k === 0) d.classList.add('active');
+      d.addEventListener('click', function () { show(k); restart(); });
+      dotsWrap.appendChild(d);
+      dots.push(d);
+    });
+    document.querySelector('.colabs-btn.prev').addEventListener('click', function () { show(i - 1); restart(); });
+    document.querySelector('.colabs-btn.next').addEventListener('click', function () { show(i + 1); restart(); });
+    restart();
   })();
 </script>
 </body>

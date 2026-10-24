@@ -191,19 +191,26 @@ footer p + p { margin-top: .4rem; }
   .nav nav a { margin-left: 1rem; font-size: .8rem; }
 }
 
-/* --- colabs carousel (1cm x 1cm) --- */
-.colabs-carousel { display: flex; align-items: center; gap: .6rem; }
+/* --- colabs carousel (una foto a la vez, rotación automática) --- */
+.colabs-carousel { display: flex; align-items: center; justify-content: center; gap: .8rem; }
 .colabs-track {
-  display: flex; gap: .5rem; overflow-x: auto; scroll-snap-type: x mandatory;
-  scrollbar-width: thin; padding: .3rem 0;
+  position: relative; width: 300px; height: 300px; overflow: hidden;
+  border: 1px solid rgba(0,240,255,.35); border-radius: .6rem;
+  box-shadow: 0 0 32px rgba(0,240,255,.18), 0 0 90px rgba(255,42,109,.12);
 }
 .colabs-track img {
-  width: 1cm; height: 1cm; object-fit: cover; flex: 0 0 auto;
-  scroll-snap-align: start; border: 1px solid var(--border); border-radius: .2rem;
-  box-shadow: 0 0 12px rgba(0,240,255,.15);
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity .6s ease;
 }
+.colabs-track img.active { opacity: 1; }
 .colabs-btn {
   background: var(--panel); color: var(--cyan); border: 1px solid var(--border);
   border-radius: .3rem; font-size: 1.4rem; line-height: 1; padding: .2rem .6rem; cursor: pointer;
 }
 .colabs-btn:hover { text-shadow: 0 0 10px rgba(0,240,255,.8); }
+.colabs-dots { display: flex; gap: .4rem; justify-content: center; margin-top: .6rem; }
+.colabs-dots button {
+  width: 9px; height: 9px; border-radius: 50%; border: 1px solid var(--cyan);
+  background: transparent; cursor: pointer; padding: 0;
+}
+.colabs-dots button.active { background: var(--cyan); box-shadow: 0 0 8px rgba(0,240,255,.8); }
