@@ -194,7 +194,7 @@ footer p + p { margin-top: .4rem; }
 /* --- colabs carousel (una foto a la vez, rotación automática) --- */
 .colabs-carousel { display: flex; align-items: center; justify-content: center; gap: .8rem; }
 .colabs-track {
-  position: relative; width: 300px; height: 300px; overflow: hidden;
+  position: relative; width: 1cm; height: 1cm; overflow: hidden;
   border: 1px solid rgba(0,240,255,.35); border-radius: .6rem;
   box-shadow: 0 0 32px rgba(0,240,255,.18), 0 0 90px rgba(255,42,109,.12);
 }
