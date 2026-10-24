@@ -190,3 +190,20 @@ footer p + p { margin-top: .4rem; }
   .glitch { font-size: 2.4rem; }
   .nav nav a { margin-left: 1rem; font-size: .8rem; }
 }
+
+/* --- colabs carousel (1cm x 1cm) --- */
+.colabs-carousel { display: flex; align-items: center; gap: .6rem; }
+.colabs-track {
+  display: flex; gap: .5rem; overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: thin; padding: .3rem 0;
+}
+.colabs-track img {
+  width: 1cm; height: 1cm; object-fit: cover; flex: 0 0 auto;
+  scroll-snap-align: start; border: 1px solid var(--border); border-radius: .2rem;
+  box-shadow: 0 0 12px rgba(0,240,255,.15);
+}
+.colabs-btn {
+  background: var(--panel); color: var(--cyan); border: 1px solid var(--border);
+  border-radius: .3rem; font-size: 1.4rem; line-height: 1; padding: .2rem .6rem; cursor: pointer;
+}
+.colabs-btn:hover { text-shadow: 0 0 10px rgba(0,240,255,.8); }
