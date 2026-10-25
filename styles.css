@@ -239,5 +239,10 @@ footer p + p { margin-top: .4rem; }
   width: 8px; height: 8px; border-radius: 50%; background: var(--cyan);
   box-shadow: 0 0 10px var(--cyan); animation: nodepulse 1.5s ease-in-out infinite;
 }
+.graph-node img.node-img {
+  width: 28px; height: 28px; object-fit: cover; border-radius: 50%; flex: 0 0 auto;
+  border: 1px solid var(--cyan); box-shadow: 0 0 10px rgba(0,240,255,.7);
+  animation: nodepulse 1.5s ease-in-out infinite;
+}
 @keyframes nodepulse { 50% { transform: scale(1.6); opacity: .6; } }
 @keyframes nodefloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
